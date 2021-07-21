@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="container-bg">
+      <profile/>
+    </div>
+    
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Profile from './components/Profile.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Profile
   }
 }
 </script>
@@ -23,6 +25,19 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+    height: 100vh;
+}
+.container-bg{
+  height: 100vh;
+  display: flex;
+  background-image: url('./images/background.jpg');
+  -webkit-background-size: cover;
+   -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  align-items: center;
+}
+form{
+  background: none;
 }
 </style>
